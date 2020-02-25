@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { increment } from "../actions/counter";
+import { increment, decrement } from "../actions/counter";
 
 class Counter extends React.Component {
   render() {
     return (
       <>
         <button onClick={e => this.props.dispatch(increment())}>INC</button>
+        <button onClick={e => this.props.dispatch(decrement())}>DEC</button>
         <h1>{this.props.counter}</h1>
       </>
     );
